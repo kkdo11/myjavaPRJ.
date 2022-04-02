@@ -1,5 +1,13 @@
+import java.util.Scanner;
 public class Codeup_1001{
     public static void main(String[] args) {
-        System.out.printf("Hello World");
+
+        Scanner s =new Scanner(System.in);
+        int a,b;
+        a=s.nextInt();
+        b=s.nextInt();
+
+        System.out.println(a+b);
+
     }
 }
