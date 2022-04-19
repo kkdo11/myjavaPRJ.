@@ -1,18 +1,27 @@
+
 import java.util.Scanner;
-//몰라 ㅅㅂ  담에 풀어
+
 public class Bj2525 {
+
     public static void main(String[] args) {
-        Scanner in=new Scanner(System.in);
-        int h,m1,m2;
-        h= in.nextInt();
-        m1= in.nextInt();
-        m2= in.nextInt();
+        Scanner sc = new Scanner(System.in);
 
-        if (m1+m2>60){
-            h++;
-            m2=60-(60-(m1+m2));
+        int h = sc.nextInt();
+        int m = sc.nextInt();
+        int n = sc.nextInt();
 
+
+        // 모든 시간을 분으로 바꾼다!
+        int a = h*60 + m + n;
+        h = a/60;
+        m = a%60;
+
+        //h가 24를 넘는다면?
+        if (h>=24) {
+            h= h-24;
         }
+
+        System.out.println(h + " "+ m);
 
     }
 }
