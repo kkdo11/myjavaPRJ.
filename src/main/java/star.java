@@ -5,16 +5,16 @@ public class star {
             for (int b = 0; b < a; b++) {
                 System.out.print(" * ");
             }
-            System.out.println(" ");
+            System.out.println();
         }
 
-        for (int i = 0; i < 10; i++) {
-            for (int c = 0; c < 10 - i; c++) {
-                System.out.print(" * ");
+        for (int i = 10; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                System.out.printf(" * ");
+
             }
-            System.out.println(" ");
+            System.out.println();
         }
-
 
 
     }
