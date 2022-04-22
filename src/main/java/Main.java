@@ -1,22 +1,22 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int a, b;
-        a = s.nextInt();
-        b = s.nextInt();
+        Scanner in = new Scanner(System.in);
 
-        if (a > 0 && b > 0) {
-            System.out.println("1사분면");
-        } else if (a < 0 && b > 0) {
-            System.out.println("2사분면");
-        } else if (a < 0 && b < 0) {
-            System.out.println("3사분면");
-        } else {
-            System.out.println("4사분면");
-        }
+        int A = in.nextInt();
+        String B = in.next();
 
+        in.close();
+
+        System.out.println(A * (B.charAt(2) - '0'));
+        System.out.println(A * (B.charAt(1) - '0'));
+        System.out.println(A * (B.charAt(0) - '0'));
+        System.out.println(A * Integer.parseInt(B));
 
     }
 }
+
+
+
