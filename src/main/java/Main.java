@@ -1,22 +1,19 @@
 import java.util.Scanner;
 
 public class Main {
+    public static void main(String args[]) {
 
-    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        int A = in.nextInt();
-        String B = in.next();
+        int a = in.nextInt();
+
+        for (int i = 1; i <= a; i++) {
+            int c = in.nextInt();
+            int d = in.nextInt();
+
+            System.out.println("Case #" + i + ": " + (c + d));
+        }
 
         in.close();
-
-        System.out.println(A * (B.charAt(2) - '0'));
-        System.out.println(A * (B.charAt(1) - '0'));
-        System.out.println(A * (B.charAt(0) - '0'));
-        System.out.println(A * Integer.parseInt(B));
-
     }
 }
-
-
-
