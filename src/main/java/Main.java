@@ -1,19 +1,17 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int []arr = new int[3];
 
-        Scanner in = new Scanner(System.in);
-
-        int a = in.nextInt();
-
-        for (int i = 1; i <= a; i++) {
-            int c = in.nextInt();
-            int d = in.nextInt();
-
-            System.out.println("Case #" + i + ": " + (c + d));
+        for(int i=0; i<3; i++) {
+            arr[i]= scanner.nextInt();
+            if(arr[i]%2 ==0) {
+                System.out.println(arr[i]);
+            }
         }
 
-        in.close();
+
     }
 }
