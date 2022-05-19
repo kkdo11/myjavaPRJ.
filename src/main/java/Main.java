@@ -1,24 +1,24 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner in = new Scanner(System.in);
-        int a, b, c;
-        a = in.nextInt();
-        b = in.nextInt();
-        c = in.nextInt();
 
-        int counts[] = new int[10];
-        int number = a * b * c;
-        while (number > 0) {
-            counts[number % 10]++;
-            number /= 10;
+        int arr[] = new int[in.nextInt()];
+
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = in.nextInt();
         }
+        in.close();
 
-        for (int i = 0; i < counts.length; ++i) {
-            System.out.println(counts[i]);
+        int sum = 0;
+        Arrays.sort(arr);
+
+        for(int i = 0; i < arr.length; i++) {
+            sum += ((arr[i] / arr[arr.length-1]) * 100);
         }
-
-
+        System.out.print(sum / arr.length);
     }
 }
