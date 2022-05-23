@@ -1,24 +1,34 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         Scanner in = new Scanner(System.in);
 
-        int arr[] = new int[in.nextInt()];
+        String arr[] = new String[in.nextInt()];
 
-        for(int i = 0; i < arr.length; i++) {
-            arr[i] = in.nextInt();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = in.next();
         }
+
         in.close();
 
-        int sum = 0;
-        Arrays.sort(arr);
+        for (int i = 0; i < arr.length; i++) {
 
-        for(int i = 0; i < arr.length; i++) {
-            sum += ((arr[i] / arr[arr.length-1]) * 100);
+            int cnt = 0;
+            int sum = 0;
+
+            for (int j = 0; j < arr[i].length(); j++) {
+
+                if (arr[i].charAt(j) == 'O') {
+                    cnt++;
+                }
+                else {
+                    cnt = 0;
+                }
+                sum += cnt;
+            }
+
+            System.out.println(sum);
         }
-        System.out.print(sum / arr.length);
     }
 }
