@@ -4,31 +4,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        String arr[] = new String[in.nextInt()];
+        int a,b,c;
+        System.out.println("세 개의 주사위를 던져서 나온 수를 입력하세요 :");
+        a=in.nextInt();
+        b=in.nextInt();
+        c=in.nextInt();
 
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = in.next();
+        if(a==b&&b==c&&c==a) {
+            System.out.println(10000 + (a * 1000));
+        }else if (b==a){
+            System.out.println(1000+(a*100));
         }
-
-        in.close();
-
-        for (int i = 0; i < arr.length; i++) {
-
-            int cnt = 0;
-            int sum = 0;
-
-            for (int j = 0; j < arr[i].length(); j++) {
-
-                if (arr[i].charAt(j) == 'O') {
-                    cnt++;
-                }
-                else {
-                    cnt = 0;
-                }
-                sum += cnt;
-            }
-
-            System.out.println(sum);
-        }
+        else if (a!=b&&b!=c&&c!=a)
+            System.out.print((Math.max(a, Math.max(b, c))*100));
     }
 }
