@@ -4,18 +4,38 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        int a,b,c;
-        System.out.println("세 개의 주사위를 던져서 나온 수를 입력하세요 :");
-        a=in.nextInt();
-        b=in.nextInt();
-        c=in.nextInt();
+        int[] arr;
 
-        if(a==b&&b==c&&c==a) {
-            System.out.println(10000 + (a * 1000));
-        }else if (b==a){
-            System.out.println(1000+(a*100));
+        int testcase = in.nextInt();
+
+        for(int i = 0 ; i < testcase ; i++) {
+
+            int N = in.nextInt();
+            arr = new int[N];
+
+            double sum = 0;
+
+            for(int j = 0 ; j < N ; j++) {
+                int val = in.nextInt();
+                arr[j] = val;
+                sum += val;
+            }
+
+            double mean = (sum / N) ;
+            double count = 0;
+
+
+            for(int j = 0 ; j < N ; j++) {
+                if(arr[j] > mean) {
+                    count++;
+                }
+            }
+
+            System.out.printf("%.3f%%\n",(count/N)*100);
+
+
         }
-        else if (a!=b&&b!=c&&c!=a)
-            System.out.print((Math.max(a, Math.max(b, c))*100));
+        in.close();
     }
+
 }
