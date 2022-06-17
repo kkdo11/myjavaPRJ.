@@ -3,17 +3,27 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int a, b, c;
-        a = s.nextInt();
-        b = s.nextInt();
-        c = s.nextInt();
-        int n=1;
-        while(a!=0&&b!=0&&c!=0)
-            if (n%a==0&&n%b==0&&n%c==0)break;
-                n++;
-        System.out.println(n);
+        Scanner in = new Scanner(System.in);
 
 
+        int[] arr = new int[26];
+
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = -1;
+        }
+
+        String S = in.nextLine();
+
+        for(int i = 0; i < S.length(); i++) {
+            char ch = S.charAt(i);
+
+            if(arr[ch - 'a'] == -1) {	// arr 원소 값이 -1 인 경우에만 초기화
+                arr[ch - 'a'] = i;
+            }
+        }
+
+        for(int val : arr) {	// 배열 출력
+            System.out.print(val + " ");
+        }
     }
-}
+}//다시 한번 보기
