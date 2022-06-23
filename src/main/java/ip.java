@@ -21,5 +21,6 @@ public class ip {
 
         String time = item[3].substring(1);
         System.out.println("time : " + time);
+        System.out.println(item[0]);
     }
 }
