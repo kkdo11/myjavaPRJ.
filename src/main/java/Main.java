@@ -2,16 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner s=new Scanner(System.in);
-
-        int a,b,c;
-        a=s.nextInt();
-        b=s.nextInt();
-        c=s.nextInt();
-
-        if (a<=170||b<=170||c<=170)
-            System.out.println("CRASH");
-        else
-            System.out.println("PASS");
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        for(int i = a; i < 90; i+=5){
+            b++;
+        }
+        System.out.print(b);
     }
 }
