@@ -1,13 +1,21 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        Scanner s = new Scanner(System.in);
-        int arr[] = {s.nextInt(), s.nextInt(), s.nextInt()};
-        Arrays.sort(arr);   //오름차순 정렬은 Array.sort(베열이름);
+        Scanner s= new Scanner(System.in);
+        int arr[]=new int[9];
+        for (int i=0; i< arr.length; i++)
+            arr[i]=s.nextInt();
 
+        int max=0;
+        int count=0;
         for (int i=0; i<arr.length; i++)
-            System.out.print(arr[i]+" ");
+            if (arr[i]>max) {
+                max = arr[i];
+                count=i+1;
+            }
+        System.out.println(max);
+        System.out.println(count);
     }
-}
+    }
+
