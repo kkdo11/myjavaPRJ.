@@ -2,16 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        Scanner s=new Scanner(System.in);
-        int a=s.nextInt();
-        int b=s.nextInt();
+        Scanner s= new Scanner(System.in);
 
-        if (a>b)
-            System.out.println(">");
-        else if (a<b)
-            System.out.println("<");
+        int a=s.nextInt();
+
+        if (a%7==0)
+            System.out.println("multiple");
         else
-            System.out.printf("=");
+            System.out.println("not multiple");
     }
 }
 
