@@ -2,11 +2,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        Scanner s = new Scanner(System.in);
-        int a = s.nextInt();
-        if ((a >= 30 && a <= 40) || (a >= 60 && a <= 70))
-            System.out.println("win");
+        Scanner s= new Scanner(System.in);
+        int y=s.nextInt();
+        int m=s.nextInt();
+        int d=s.nextInt();
+        int a=y-m+d;
+
+        if (a%10==0)
+            System.out.println("대박");
         else
-            System.out.printf("lose");
+            System.out.printf("그럭저럭");
     }
 }
