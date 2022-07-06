@@ -6,9 +6,9 @@ public class Main {
         int y=s.nextInt();
         int m=s.nextInt();
         int d=s.nextInt();
-        int a=y-m+d;
+        int a=y+m+d;
 
-        if (a%10==0)
+        if (a/100%2==0)
             System.out.println("대박");
         else
             System.out.printf("그럭저럭");
