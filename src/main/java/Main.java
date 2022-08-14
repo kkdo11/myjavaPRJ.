@@ -3,20 +3,28 @@
     public class Main {
         public static void main(String[] args){
             Scanner s= new Scanner(System.in);
+            float a=s.nextInt();
+            float b=s.nextInt();
+            double c,d,e,f,g,h,i,j,k,l;
 
+//%0.6f
+            c=a+b;
+            d=b+a;
+            e=a-b;
+            f=b-a;
+            g=a*b;
+            h=b*a;
+            i=a/b;
+            j=b/a;
+            k=Math.pow(a,b);
+            l=Math.pow(b,a);
 
-               int a=s.nextInt();
-               if (a % 10 == 1 && a != 11)
-                   System.out.println(a + "st");
-               else if (a % 10 == 2 && a != 12)
-                   System.out.println(a + "nd");
-               else if (a % 10 == 3 && a != 13)
-                   System.out.println(a + "rd");
-               else if (a==11||a==12||a==13)
-                   System.out.println(a + "th");
-               else
-                   System.out.println(a+"th");
-
-
+            double arr[]={c,d,e,f,g,h,i,j,k,l};
+            double max=arr[0];
+            for (int o=0; o<arr.length; o++){
+                if (max<arr[o])
+                    max=arr[o];
+            }
+            System.out.printf("%.6f",max);
         }
     }
