@@ -2,29 +2,17 @@
 
     public class Main {
         public static void main(String[] args){
-            Scanner s= new Scanner(System.in);
-            float a=s.nextInt();
-            float b=s.nextInt();
-            double c,d,e,f,g,h,i,j,k,l;
+            Scanner s=new Scanner(System.in);
+            int a= s.nextInt();
+            int b= s.nextInt();
+            int c=b/a;
+            int d=a/b;
 
-//%0.6f
-            c=a+b;
-            d=b+a;
-            e=a-b;
-            f=b-a;
-            g=a*b;
-            h=b*a;
-            i=a/b;
-            j=b/a;
-            k=Math.pow(a,b);
-            l=Math.pow(b,a);
-
-            double arr[]={c,d,e,f,g,h,i,j,k,l};
-            double max=arr[0];
-            for (int o=0; o<arr.length; o++){
-                if (max<arr[o])
-                    max=arr[o];
-            }
-            System.out.printf("%.6f",max);
+            if (b%a==0)
+                System.out.printf("%d*%d=%d",a,c,b);
+            else if (a%b==0)
+                System.out.printf("%d*%d=%d",b,d,a);
+            else
+                System.out.println("none");
         }
     }
