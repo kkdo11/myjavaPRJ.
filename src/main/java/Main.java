@@ -3,21 +3,20 @@ import java.util.Scanner;
 public class Main{
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int sum=s.nextInt();
-        int n=s.nextInt();
+        Scanner in = new Scanner(System.in);
 
-        for (int i=0; i<n; i++) {
-            int p = s.nextInt();
-            int r = s.nextInt();
-            sum=sum-(p*r);
+        int n;
+        n=in.nextInt();
+        int a,b;
+        int sum=0;
+        for (int i=0; i<n; i++){
+            a= in.nextInt();
+            b= in.nextInt();
+            sum=a+b;
+            System.out.println(sum);
         }
 
-        if (sum==0){
-            System.out.printf("Yes");
-        }else{
-            System.out.printf("No");
-        }
+
     }
 
 }
