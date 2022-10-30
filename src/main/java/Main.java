@@ -1,25 +1,31 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
 
-        class Test{
-            long sum(int[] a){
-                long sum=0;
-            for (int i=0; i<a.length; i++){
-                sum+=a[i];
-            }
-            return sum;
-            }
-        }
+        int k=1;
+        int q=1;
+        int r=2;
+        int b=2;
+        int kn=2;
+        int p=8;
 
-    }
-}
-class Test {
-    long sum(int[] a) {
-        long sum = 0;	// a 배열 정수 합 변수
+        k=k-in.nextInt();
+        q=q-in.nextInt();
+        r=r-in.nextInt();
+        b=b-in.nextInt();
+        kn=kn-in.nextInt();
+        p=p-in.nextInt();
 
-        for(int i = 0; i < a.length; i++) {
-            sum += a[i];
-        }
-        return sum;
+        System.out.print(k+ " ");
+        System.out.print(q+ " ");
+        System.out.print(r+ " ");
+        System.out.print(b+ " ");
+        System.out.print(kn+ " ");
+        System.out.print(p);
+
+
+
     }
 }
